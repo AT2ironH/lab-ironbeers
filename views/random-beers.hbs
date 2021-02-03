@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random beers</title>
+    
+</head>
+<body>
+    <div class="containerSingleBeer">
+    {{#each responseFromAPI}}
+        <img class="singleBeerImg"src={{this.image_url}}>
+        <div class="singleBeer">
+            <h1>Name:{{this.name}}</h1>
+            <h3>{{this.tagline}}</h3>
+            <p>{{this.description}}</p>
+            <div>{{this.food_pairing}}</div>
+            <div>{{this.brewers_tips}}</div>
+        </div>
+    {{/each}}
+    </div>
+</body>
+</html>
+
+{{!-- <div class="container">
+    {{#each beersFromApi}}
+        <img class="randomImg" src={{this.image_url}}>
+        <div class="beerText">
+            <h1>Name:{{this.name}}</h1>
+            <aside>{{this.tagline}}</aside>
+            <p>{{this.description}}</p>
+        
+        </div> --}}
